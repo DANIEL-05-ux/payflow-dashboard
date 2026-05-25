@@ -1,0 +1,143 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    overflow-x: hidden;
+}
+
+/* SMOOTH TRANSITIONS */
+body,
+button,
+input,
+table,
+div {
+    transition: all 0.25s ease;
+}
+
+/* PRIME NG MULTISELECT */
+.p-multiselect {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+/* GLOBAL CARD STYLE */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* TABLES */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+td {
+    color: #f3f4f6;
+}
+
+/* INPUTS */
+input,
+.p-inputtext {
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    color: white !important;
+    border-radius: 12px !important;
+}
+
+/* BUTTONS */
+button,
+.p-button {
+    border-radius: 12px !important;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a3a3a;
+}
+
+/* LINKS */
+a {
+    color: #14b8a6;
+    text-decoration: none;
+}
+
+/* PAGE SPACING */
+.page-container {
+    padding: 24px;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* FORCE DARK APP BACKGROUND */
+html,
+body,
+app-root {
+    background: #090909 !important;
+    min-height: 100%;
+}
+
+/* GLOBAL CONTENT AREA */
+.p-component {
+    color: white;
+}
+
+/* PRIME CARD */
+.p-card {
+    background: transparent !important;
+    color: white !important;
+}
+
+/* TABLE TEXT */
+.p-datatable {
+    color: white !important;
+}
+
+/* INPUT LABELS */
+label {
+    color: #9ca3af !important;
+}
+
+/* CHART FIX */
+canvas {
+    filter: brightness(0.95);
+}

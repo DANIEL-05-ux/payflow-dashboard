@@ -1,0 +1,66 @@
+<div class="statistics-container">
+
+  <p-card class="stats-card transaction-chart">
+
+    <div class="card-header">
+      <div>
+        <h3>Successful Transactions</h3>
+        <p>Processed payment activity overview</p>
+      </div>
+
+      <div class="icon-box">
+        <i class="pi pi-chart-line"></i>
+      </div>
+    </div>
+
+    <p-chart
+      type="line"
+      [data]="transactionChartData"
+      [options]="transactionChartOptions"
+    />
+
+  </p-card>
+
+  <p-card class="stats-card users-chart">
+
+    <div class="card-header">
+      <div>
+        <h3>Active Users</h3>
+        <p>System access and user growth</p>
+      </div>
+
+      <div class="icon-box">
+        <i class="pi pi-users"></i>
+      </div>
+    </div>
+
+    <p-chart
+      type="line"
+      [data]="usersChartData"
+      [options]="usersChartOptions"
+    />
+
+  </p-card>
+
+  <p-card class="stats-card payment-chart">
+
+    <div class="card-header">
+      <div>
+        <h3>Payment Distribution</h3>
+        <p>Current transaction status analysis</p>
+      </div>
+
+      <div class="icon-box">
+        <i class="pi pi-wallet"></i>
+      </div>
+    </div>
+
+    <p-chart
+      type="pie"
+      [data]="paymentStatusChartData"
+      [options]="paymentStatusChartOptions"
+    />
+
+  </p-card>
+
+</div>

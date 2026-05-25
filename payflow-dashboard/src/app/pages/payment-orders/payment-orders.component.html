@@ -1,0 +1,150 @@
+<div class="page-header">
+
+  <div class="header-left">
+
+    <div class="badge">
+      <i class="pi pi-wallet"></i>
+      <span>Transaction Monitoring</span>
+    </div>
+
+    <h1>Payment Operations</h1>
+
+    <p>
+      Track transaction activity, monitor payment flow,
+      and manage operational records across the platform.
+    </p>
+
+  </div>
+
+</div>
+
+<div class="order-container">
+
+  <p-table
+    #dt
+    [value]="paymentOrders"
+    [paginator]="true"
+    [rows]="10"
+    [sortField]="sortField"
+    [sortOrder]="sortOrder"
+    [globalFilterFields]="[
+      'paymentReference',
+      'title',
+      'status',
+      'amount',
+      'currency'
+    ]"
+  >
+
+    <!-- SEARCH -->
+    <ng-template pTemplate="caption">
+
+      <div class="table-toolbar">
+
+        <div class="search-box">
+
+          <i class="pi pi-search"></i>
+
+          <input
+            type="text"
+            placeholder="Search transactions..."
+            (input)="applyGlobalFilter($event, dt)"
+          />
+
+        </div>
+
+      </div>
+
+    </ng-template>
+
+    <!-- TABLE HEADER -->
+    <ng-template pTemplate="header">
+
+      <tr>
+
+        <th pSortableColumn="paymentReference">
+          Reference
+          <p-sortIcon field="paymentReference"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="title">
+          Transaction
+          <p-sortIcon field="title"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="status">
+          Status
+          <p-sortIcon field="status"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="amount">
+          Amount
+          <p-sortIcon field="amount"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="currency">
+          Currency
+          <p-sortIcon field="currency"></p-sortIcon>
+        </th>
+
+        <th>Action</th>
+
+      </tr>
+
+    </ng-template>
+
+    <!-- TABLE BODY -->
+    <ng-template pTemplate="body" let-order>
+
+      <tr>
+
+        <td class="reference">
+          {{ order.paymentReference }}
+        </td>
+
+        <td>
+          {{ order.title }}
+        </td>
+
+        <td>
+
+          <span
+            class="status-badge"
+            [ngClass]="{
+              'success': order.status === 'Successful',
+              'pending': order.status === 'Created',
+              'failed': order.status === 'Unsuccessful'
+            }"
+          >
+            {{ order.status }}
+          </span>
+
+        </td>
+
+        <td class="amount">
+          ${{ order.amount }}
+        </td>
+
+        <td>
+          {{ order.currency }}
+        </td>
+
+        <td>
+
+          <button
+            pButton
+            type="button"
+            icon="pi pi-arrow-up-right"
+            class="action-btn"
+            (click)="viewDetails(order)"
+          ></button>
+
+        </td>
+
+      </tr>
+
+    </ng-template>
+
+  </p-table>
+
+</div>

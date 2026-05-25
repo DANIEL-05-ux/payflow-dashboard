@@ -1,0 +1,154 @@
+.main-container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #090909;
+    padding: 24px;
+}
+
+/* BACKGROUND GLOW */
+.background-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+        circle,
+        rgba(20, 184, 166, 0.18) 0%,
+        rgba(20, 184, 166, 0) 70%
+    );
+    filter: blur(40px);
+    z-index: 0;
+}
+
+/* LOGIN CARD */
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 460px;
+    padding: 18px;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* TOP SECTION */
+.top-section {
+    text-align: center;
+    margin-bottom: 38px;
+
+    h1 {
+        color: white;
+        font-size: 34px;
+        font-weight: 700;
+        margin-top: 18px;
+        margin-bottom: 12px;
+        letter-spacing: -1px;
+    }
+
+    p {
+        color: #8b8b8b;
+        line-height: 1.6;
+        font-size: 14px;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+}
+
+/* LOGO */
+.logo-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 22px;
+
+    margin: 0 auto;
+
+    background: linear-gradient(
+        135deg,
+        #14b8a6,
+        #0f766e
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 10px 40px rgba(20, 184, 166, 0.35);
+
+    i {
+        font-size: 30px;
+        color: white;
+    }
+}
+
+/* FORM */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* INPUTS */
+.input-group {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+}
+
+/* BUTTON */
+.login-btn {
+    margin-top: 10px;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+/* PRIME BUTTON OVERRIDE */
+::ng-deep .login-btn .p-button {
+    width: 100%;
+    border-radius: 16px;
+    border: none;
+
+    padding: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #14b8a6,
+        #0f766e
+    );
+
+    transition: all 0.25s ease;
+}
+
+::ng-deep .login-btn .p-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 35px rgba(20,184,166,0.35);
+}
+
+/* ERROR */
+.error-message {
+    color: #f87171;
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+}

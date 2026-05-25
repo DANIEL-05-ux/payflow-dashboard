@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: #050816;
+}
+
+/* SIDEBAR */
+app-sidebar {
+  width: 250px;
+  min-width: 250px;
+  background: linear-gradient(
+    180deg,
+    #050816 0%,
+    #0b1120 100%
+  );
+  border-right: 1px solid rgba(255,255,255,0.05);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+/* MAIN CONTENT */
+.content {
+  flex: 1;
+  overflow-y: auto;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(20,184,166,0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(59,130,246,0.08),
+      transparent 25%
+    ),
+    #050816;
+
+  color: white;
+
+  padding: 0;
+}
+
+/* GLOBAL SCROLLBAR */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}

@@ -1,0 +1,84 @@
+<div class="sidebar-container">
+
+  <!-- BRAND -->
+  <div class="brand-section" routerLink="/home">
+
+   <img
+  src="/payflow-logo.png"
+  alt="PayFlow Logo"
+  class="brand-logo"
+/>
+
+    <div class="brand-text">
+
+      <h1>payflow</h1>
+
+      <p>Operations Panel</p>
+
+    </div>
+
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="sidebar">
+
+    <a
+      class="link"
+      routerLink="/home"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <i class="pi pi-home"></i>
+      <span>Dashboard</span>
+    </a>
+
+    <a
+      class="link"
+      routerLink="/payment-orders"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <i class="pi pi-credit-card"></i>
+      <span>Transactions</span>
+    </a>
+
+    <a
+      class="link"
+      routerLink="/users"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <i class="pi pi-users"></i>
+      <span>Team Access</span>
+    </a>
+
+    <!-- BOTTOM -->
+    <div class="bottom-section">
+
+      @if (!(isLoggedIn)) {
+
+      <button
+        pButton
+        routerLink="/login"
+        class="sidebar-btn"
+      >
+        <div class="btn">Secure Login</div>
+      </button>
+
+      } @else {
+
+      <button
+        pButton
+        (click)="logout()"
+        class="sidebar-btn logout-btn"
+      >
+        <div class="btn">Logout</div>
+      </button>
+
+      }
+
+    </div>
+
+  </nav>
+
+</div>

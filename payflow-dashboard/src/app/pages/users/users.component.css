@@ -1,0 +1,193 @@
+.title-container {
+    padding: 40px 40px 20px;
+}
+
+.title {
+    margin: 0;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: white;
+}
+
+/* PAGE */
+.user-container {
+    padding: 0 40px 40px;
+}
+
+/* FORM CARD */
+form {
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.35);
+}
+
+/* INPUT GROUP */
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABELS */
+label {
+    margin-bottom: 10px;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* INPUTS */
+::ng-deep .p-inputtext {
+    background: rgba(255,255,255,0.04) !important;
+
+    border: 1px solid rgba(255,255,255,0.08) !important;
+
+    color: white !important;
+
+    border-radius: 14px;
+
+    padding: 14px 16px;
+
+    transition: all 0.25s ease;
+}
+
+::ng-deep .p-inputtext:focus {
+    border-color: #14b8a6 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(20,184,166,0.15) !important;
+}
+
+/* MULTISELECT */
+::ng-deep .p-multiselect {
+    background: rgba(255,255,255,0.04) !important;
+
+    border: 1px solid rgba(255,255,255,0.08) !important;
+
+    border-radius: 14px;
+
+    color: white !important;
+}
+
+/* ERROR */
+small {
+    color: #f87171;
+    margin-top: 6px;
+}
+
+/* BUTTON AREA */
+.two-buttons {
+    display: flex;
+    flex-direction: row !important;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+/* PRIMARY BUTTON */
+::ng-deep .p-button {
+    border-radius: 14px;
+
+    padding: 12px 18px;
+
+    font-weight: 600;
+}
+
+/* TABLE */
+.table-container {
+    margin-top: 32px;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 24px;
+
+    padding: 20px;
+
+    backdrop-filter: blur(12px);
+}
+
+/* TABLE HEADER */
+::ng-deep .p-datatable thead th {
+    background: transparent !important;
+
+    color: #9ca3af !important;
+
+    border: none !important;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+/* TABLE ROW */
+::ng-deep .p-datatable tbody tr {
+    background: rgba(255,255,255,0.02);
+
+    transition: all 0.2s ease;
+}
+
+::ng-deep .p-datatable tbody tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* TABLE CELL */
+::ng-deep .p-datatable tbody td {
+    border: none !important;
+
+    color: white !important;
+
+    padding: 18px 14px;
+}
+
+/* PAGINATOR */
+::ng-deep .p-paginator {
+    background: transparent !important;
+
+    border: none !important;
+
+    margin-top: 20px;
+}
+
+/* ACTION BUTTONS */
+::ng-deep .p-button-danger {
+    background: rgba(248,113,113,0.15) !important;
+    border: none !important;
+}
+
+::ng-deep .p-button-danger:hover {
+    background: rgba(248,113,113,0.25) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .title {
+        font-size: 34px;
+    }
+
+    .user-container {
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,60 @@
+<div class="main-container">
+
+  <div class="background-glow"></div>
+
+  <p-card class="login-container">
+
+    <div class="top-section">
+      <div class="logo-circle">
+        <i class="pi pi-chart-line"></i>
+      </div>
+
+      <h1>PayFlow</h1>
+
+      <p>
+        Secure payment operations dashboard for managing
+        transactions, team access, and workflow monitoring.
+      </p>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <div class="input-group">
+        <p-floatLabel>
+          <input
+            id="email"
+            pInputText
+            formControlName="email"
+            type="email"
+          />
+          <label for="email">Email Address</label>
+        </p-floatLabel>
+      </div>
+
+      <div class="input-group">
+        <p-floatLabel>
+          <input
+            id="password"
+            pInputText
+            formControlName="password"
+            type="password"
+          />
+          <label for="password">Password</label>
+        </p-floatLabel>
+      </div>
+
+      <button pButton class="login-btn">
+        <div class="btn">Access Dashboard</div>
+      </button>
+
+    </form>
+
+    @if (errorMessage) {
+      <div class="error-message">
+        {{ errorMessage }}
+      </div>
+    }
+
+  </p-card>
+
+</div>

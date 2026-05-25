@@ -1,0 +1,137 @@
+.container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+/* MAIN CARD */
+.unauthorized-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    max-width: 430px;
+
+    padding: 38px 34px;
+
+    border-radius: 24px;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.32);
+
+    gap: 18px;
+}
+
+/* ICON */
+.unauthorized-container i {
+
+    font-size: 58px;
+
+    color: #14b8a6;
+
+    opacity: 0.95;
+}
+
+/* TITLE */
+.unauthorized-container h1 {
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 38px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+}
+
+/* TEXT */
+.unauthorized-container p {
+
+    margin: 0;
+
+    color: #8b8b8b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    max-width: 320px;
+}
+
+/* BUTTON LINK */
+.unauthorized-container a {
+
+    text-decoration: none;
+
+    margin-top: 6px;
+}
+
+/* BUTTON */
+::ng-deep .p-button {
+
+    background: linear-gradient(
+        135deg,
+        #14b8a6,
+        #0ea5e9
+    ) !important;
+
+    border: none !important;
+
+    color: white !important;
+
+    border-radius: 14px !important;
+
+    padding: 12px 24px !important;
+
+    font-size: 14px !important;
+
+    font-weight: 600 !important;
+
+    transition: all 0.25s ease;
+}
+
+/* BUTTON HOVER */
+::ng-deep .p-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(20,184,166,0.22);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .unauthorized-container {
+
+        padding: 32px 22px;
+    }
+
+    .unauthorized-container h1 {
+
+        font-size: 32px;
+    }
+
+    .unauthorized-container i {
+
+        font-size: 48px;
+    }
+}
