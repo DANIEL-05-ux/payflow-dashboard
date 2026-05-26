@@ -1,7 +1,6 @@
-# Admin Dashboard
+# PayFlow Dashboard
 
-A modern, responsive admin dashboard built with Angular for managing users and payment orders. This application provides a comprehensive interface for administrators to view analytics, manage user accounts, and track payment transactions.
-
+A modern payment operations dashboard built with Angular for managing users, monitoring transactions, and visualizing operational analytics. PayFlow provides role-based authentication, async dashboard loading, and a responsive UI optimized for administrative workflows.
 ![Screenshot image of the app](screenshot.png)
 
 ## 🌟 Features
@@ -12,7 +11,7 @@ A modern, responsive admin dashboard built with Angular for managing users and p
 - **Role-Based Authentication**: Separate access levels for Administrators and Customers
 - **Responsive Design**: Modern UI built with PrimeNG components
 - **Real-time Data**: JSON Server backend for seamless data operations
-
+- **Async Dashboard Loading**: Simulated API delays with loading-state UX for real-time application behavior
 ## 🛠️ Built With
 
 - **Angular 18** - Frontend framework
@@ -75,8 +74,8 @@ Before you can run this application, make sure you have the following installed:
 1. **Clone the repository**:
 
 ```sh
-git clone https://github.com/marinactonci/AdminDashboard.git
-cd AdminDashboard
+git clone https://github.com/DANIEL-05-ux/payflow-dashboard.git
+cd payflow-dashboard
 ```
 
 2. **Install dependencies**:
